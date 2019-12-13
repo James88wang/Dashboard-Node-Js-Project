@@ -1,14 +1,20 @@
-# ECE-NodeJS-Project Lab 4
+# ECE-NodeJS-Dashboard-Project 
 [![Build Status](https://travis-ci.com/HenintsoaRaza/lab4.svg?branch=master)](https://travis-ci.com/HenintsoaRaza/lab4)
-## ola qué tal ? ola muy bien y tu ? estoy a la brancha dos ! estoy todo la vida en este brancha! im in the master branchhhhhhhhhh bruuuh
-## ola qué tal ? ola muy bien y tu ? estoy a la brancha dos ! estoy todo la vida en este brancha! aaaaaaaaaaaaaaahhhhhhhhhhhhhhhh 
-Lab 4 allows:
 
-  * CRUD users
-  * User authentication
-  * for a user to get ONLY his metrics
-  * Unit tests for save/update/delete/get metric functions
+Dashboard allows:
 
+  * API side 
+    - CRUD users 
+    - Authenticate
+    - CRUD your own metrics 
+  * Front side
+    - Home page
+    - Sign In / Sign Up / Sign Out
+    - Insert/update/delete metrics once logged in
+    - Retrieve the user’s metrics and display it in a graph
+    - Only access the user’s metrics, not the other ones
+  * Utils 
+    - pre-populate the database with at least two users and their own metrics
 
 
 ## Prerequisites
@@ -18,24 +24,18 @@ Before you begin, ensure you have met the following requirement:
 
 
 
-## Installing Lab 4
+## Installing dashboard project
 
-To install Lab 4, follow these steps:
+To install the project, follow these steps:
 1. Open your terminal
 2. Go to the directory of your choice to clone the project
 3. Clone the repository with git Bash:
 
 ```shell
-> git clone https://github.com/James88wang/ECE-NodeJS-Project.git
+> git clone https://github.com/James88wang/Dashboard-Node-Js-Project.git
 ```
 
-4. Then move to the `/lab4` directory:
-
-```bash
-> cd lab4
-```
-
-5. Install the dependencies:
+4. Install the dependencies:
 
 ```shell
 > npm install
@@ -44,14 +44,14 @@ To install Lab 4, follow these steps:
 
 
 
-## Using Lab 4
+## Using dashboard project
 
-### To launch the Lab 4 project
+### To launch the dashboard project
 
-1. Go to the `<my_path>/ECE-NodeJS-Project/lab4` directory:
+1. Go to the `<my_path>/Dashboard-Node-Js-Project` directory:
 
 ```shell
-> cd <my_path>/ECE-NodeJS-Project/lab4
+> cd <my_path>/Dashboard-Node-Js-Project
 ```
 
 2. Run the project:
@@ -82,7 +82,6 @@ To install Lab 4, follow these steps:
 
 
 ## Contact
-
 
 * james.wang@edu.ece.fr
 * henintsoa.razafindrazaka@edu.ece.fr
