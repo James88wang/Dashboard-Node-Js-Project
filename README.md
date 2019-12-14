@@ -12,7 +12,7 @@ Dashboard allows:
     - Insert/update/delete metrics once logged in
     - Retrieve the user’s metrics and display it in a graph
     - Only access the user’s metrics, not the other ones
-  * Utils 
+  * Utility
     - pre-populate the database with at least two users and their own metrics
 
 
