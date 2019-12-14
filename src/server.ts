@@ -89,7 +89,7 @@ app.get('/', authCheck, (req: any, res: any) => {
 
 const userRouter = express.Router()
 app.use('/user', userRouter)
-
+// sign up
 userRouter.post('/', (req: any, res: any, next: any) => {
   dbUser.get(req.body.username, function (err: Error | null, result?: User) {
     if (!err || result !== undefined) {
