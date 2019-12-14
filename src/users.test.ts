@@ -36,6 +36,7 @@ describe('user', function () {
     })
   })
 
+
   describe('#delete', function () {
     it('should delete user ', function () {
         dbUser.delete("heni", function (err: Error | null) {
