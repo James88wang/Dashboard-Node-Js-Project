@@ -48,7 +48,7 @@ describe('user', function () {
         })
     })
   })
-
+                     
   describe('#get', function () { 
     it('should get undefined object', function () { // because user with username "heni" has been deleted
       dbUser.get("heni", function (err: Error | null, result?: User) {
