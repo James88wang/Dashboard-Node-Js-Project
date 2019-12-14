@@ -60,6 +60,8 @@ To install the project, follow these steps:
 > npm run pre-populate
 ```
 
+
+
 ### To launch the dashboard project
 
 1. Go to the `<my_path>/Dashboard-Node-Js-Project` directory:
@@ -78,13 +80,20 @@ To install the project, follow these steps:
 
 ### To start using the project
 
-1. Create a user by signing up or use pre-populate user credentials to connect
+1. 1. Create a user by signing up
 
+   2.  Or use pre-populate user credentials to connect:
+
+   | Login | Password | email                 |
+| ----- | -------- | --------------------- |
+   | james | pwd      | james.wang@edu.ece.fr |
+   | henintsoa | pwd      | henintsoa.razafindrazaka@edu.ece.fr |
+   
 2. Sign in with your credentials
-3. Add metrics, specifying the name and the value in the `m_name` and `Value` input fields, and clicking on the `Post metric` button
-4. Display all the metrics by clicking on the `Get All Metrics` button
-5. Display a specific metric by specifying the name of it the `metric's name` input field and clicking on the `Search metrics` button
-6. Delete a metric by specifying the name of it and clicking on the `Delete Metric` button
+3. Add metrics, specifying the name and the value in the `Group name` and `Value` input fields, and clicking on the `Post metric` button
+4. Display all the metrics in a table and a graph by clicking on the `Get All Metrics` button
+5. Display a specific group of metrics by specifying the name of it in the `Group name` input field and clicking on the `Search metrics` button
+6. Delete a group of metric by specifying the name of it in `Group name` and clicking on the `Delete Metric` button
 7. Logout from your account by clicking on the `Logout` button or delete the account by clicking on the `Delete` button
 
 
