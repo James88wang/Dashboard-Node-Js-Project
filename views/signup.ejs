@@ -5,7 +5,7 @@
     <% include partials/head %>
 </head>
 
-<body class="container">
+<body class="container bg-dark text-white ">
     <%if(message != ""){%>
         <div class="alert">
                 <%= message%>
@@ -13,20 +13,22 @@
     <% } %>
     
     <div id="form">
-        <p>Please signup </p>
+        <h1> Welcome to the Jungle <p style="font-size:50px">&#129323;</p> </h1>
+
+        <h4> Please signup </h4> 
         <hr />
         <form action="/user" method="post">
             <div class="form-group">
                 <label for="form_username">Username</label>
-                <input id="form_username" type="text" name="username" />
+                <input id="form_username" type="text" name="username" class="bg-dark text-white rounded" />
             </div>
             <div class="form-group">
                 <label for="form_password">Password</label>
-                <input id="form_password" type="password" name="password" />
+                <input id="form_password" type="password" name="password" class="bg-dark text-white rounded" />
             </div>
             <div class="form-group">
                 <label for="form_email">Email</label>
-                <input id="form_email" type="email" name="email"  />
+                <input id="form_email" type="email" name="email"  class="bg-dark text-white rounded" />
             </div>
             <button class="btn btn-primary btn-block" type="submit" value="Submit">Sign Up</button>
         </form>

@@ -7,7 +7,7 @@
 
 <body class="container bg-dark text-white ">
 
-	<div class="col-md-12 col-md-offset-3">
+	<div class="bg-dark rounded border border-secondary justify-content-center align-items-center text-center">
 		<h1>Hello <%- name %></h1>
 
 		<button class="btn btn-danger" href="/logout" onClick='document.location.href="/logout"'>
@@ -16,29 +16,68 @@
 
 		<button class="btn btn-danger " id="delete" type="submit" value="delete">
 			Delete
-		</button> <br /><br />
+		</button> <br />
+
+		<!-- read user -->
+		<table class="table table-striped table-dark text-white ">
+			<thead>
+				<tr>
+					<th scope="col"> username </th>
+					<th scope="col"> email </th>
+				</tr>
+				<tr>
+					<td> <%- name %> </td>
+					<td> <%- email %> </td>
+				</tr>
+			</thead>
+			<tbody id="userInfo">
+				<!-- Metrics insterted here -->
+			</tbody>
+		</table>
 
 
-		<form action="/metrics" method="post"
-			class="bg-dark rounded border border-secondary d-flex justify-content-center align-items-center">
+		<!-- udate user -->
+		<form method="GET" action="">
+			<label for="form_new_password"> New Password </label>
+			<input required type="password" id="new_Password" class="bg-dark text-white rounded" />
 
-			<div class="form-group">
-				<br>
-				<label for="form_m_name"> m_name </label>
-				<input required id="form_m_name" type="text" name="m_name" class="bg-dark text-white rounded" />
-			</div>
-			<div class="form-group">
-				<br>
-				<label for="form_number"> Value </label>
-				<input required id="form_number" type="number" name="value" class="bg-dark text-white rounded" />
-			</div><br>
-			<button class="btn btn-success " type="submit" value="post">
-				Post metric
+			<label for="form_new_email"> New email </label>
+			<input required type="email" id="new_Email" class="bg-dark text-white rounded" />
+
+			<button class="btn btn-primary" id="updateUser">
+				Update User
 			</button>
 		</form>
 
-		<br />
+		<br /><br />
+
 	</div>
+
+
+
+	<br />
+
+
+	<form action="/metrics" method="post"
+		class="bg-dark rounded border border-secondary d-flex justify-content-center align-items-center">
+
+		<div class="form-group">
+			<br>
+			<label for="form_m_name"> m_name </label>
+			<input required id="form_m_name" type="text" name="m_name" class="bg-dark text-white rounded" />
+		</div>
+		<div class="form-group">
+			<br>
+			<label for="form_number"> Value </label>
+			<input required id="form_number" type="number" name="value" class="bg-dark text-white rounded" />
+		</div><br>
+		<button class="btn btn-success " type="submit" value="post">
+			Post metric
+		</button>
+	</form>
+
+	<br />
+
 
 	<div class="bg-dark rounded border border-secondary justify-content-center align-items-center text-center">
 		<br>
@@ -240,9 +279,7 @@
 					printGraph()
 
 					$.getJSON("/metrics", {}, (data) => {
-						console.log(data)
-						var result = sortResult(data) 
-						console.log(result)						
+						var result = sortResult(data)
 						const content = result.map(d => {
 							return (
 								'<tr>' +
@@ -284,7 +321,6 @@
 							$('#searchMetrics').empty()
 							$('#searchMetrics').append(content.join("\n"));
 						});
-						console.log('/metrics/' + m_name)
 						console.log('yes dans le client')
 					},
 					error: () => {
@@ -334,6 +370,30 @@
 				})
 			}
 
+		})
+
+		$('#updateUser').click((e) => {  // update User
+			e.preventDefault();
+			var new_password = document.getElementById("new_Password").value
+			var new_email = document.getElementById("new_Email").value
+			if (new_password == '' && new_email == '') {
+				alert(`Please specify a new password or a new email`)
+			}
+			else {
+				$.ajax({
+					async: true,
+					url: '/user/' + username,
+					type: 'PUT',
+					data: JSON.stringify({ 'password': new_password, 'email': new_email }),
+					contentType: 'application/json',
+					success: () => {
+						window.location.replace('/')
+					},
+					error: () => {
+						console.log('Ouille ouille error update user')
+					}
+				})
+			}
 		})
 
 

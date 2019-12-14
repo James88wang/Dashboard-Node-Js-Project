@@ -73,7 +73,6 @@ export class UserHandler {
 		var username = user.username
 		var new_password = user.getPassword()
 		var new_email = user.email
-		console.log(user)
 		this.db.put(`user:${username}`, `${new_password}:${new_email}`, (error) => {
 
 			if (error) {
