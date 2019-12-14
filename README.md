@@ -44,6 +44,22 @@ To install the project, follow these steps:
 
 
 
+## Pre-populate the database with two users and their own metrics
+
+To pre-populate the database, follow these steps:
+1. Go to the `<my_path>/Dashboard-Node-Js-Project` directory:
+
+```shell
+> cd <my_path>/Dashboard-Node-Js-Project
+```
+2. Run the pre-populating code:
+
+```shell
+> npm run pre-populate
+```
+
+
+
 ## Using dashboard project
 
 ### To launch the dashboard project
