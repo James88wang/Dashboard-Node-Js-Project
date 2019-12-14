@@ -74,7 +74,11 @@ const authCheck = function (req: any, res: any, next: any) {
 }
 
 app.get('/', authCheck, (req: any, res: any) => {
-  res.render('index', { name: JSON.stringify(req.session.user.username) })
+  res.render('index', { 
+    name: JSON.stringify(req.session.user.username),
+    password: JSON.stringify(req.session.user.password),
+    email: JSON.stringify(req.session.user.email)
+  })
 })
 
 

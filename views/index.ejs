@@ -18,6 +18,27 @@
       Delete
     </button> <br /><br />
 
+    <!-- read user -->
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col"> username </th>
+          <th scope="col"> password </th>
+          <th scope="col"> email </th>
+        </tr>
+        <tr>
+          <td> <%- name %> </td>
+          <td> <%- password%> </td>
+          <td> <%- email %> </td>
+        </tr>
+      </thead>
+      <tbody id="userInfo">
+        <!-- Metrics insterted here -->
+      </tbody>
+    </table>
+    <br /><br />
+
+    <!-- udate user -->
     <label for="form_new_password"> new paswword </label>
     <input type="text" id="new_Password" />
 

@@ -78,7 +78,15 @@ export class UserHandler {
       } else callback(null)
     })
   }
-
+  public decrypt(code) {
+    let iv = Buffer.from(code.iv, 'hex');
+    let encryptedText = Buffer.from(code.encryptedData, 'hex');
+    let decipher = crypto.createDecipheriv('aes-256-cbc', Buffer.from(key), iv);
+    let decrypted = decipher.update(encryptedText);
+    decrypted = Buffer.concat([decrypted, decipher.final()]);
+    return decrypted.toString();
+  }
+  
   constructor(path: string) {
     this.db = LevelDB.open(path)
   }
