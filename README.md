@@ -113,8 +113,10 @@ To pre-populate the database, follow these steps:
 
    2.  Or use pre-populate user credentials to connect:
 
+
+
    | Login | Password | email                 |
-| ----- | -------- | --------------------- |
+   | ----- | -------- | --------------------- |
    | james | pwd      | james.wang@edu.ece.fr |
    | henintsoa | pwd      | henintsoa.razafindrazaka@edu.ece.fr |
    
