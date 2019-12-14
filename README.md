@@ -1,5 +1,4 @@
 # ECE-NodeJS-Dashboard-Project 
-[![Build Status](https://travis-ci.com/HenintsoaRaza/lab4.svg?branch=master)](https://travis-ci.com/HenintsoaRaza/lab4)
 
 Dashboard allows:
 
@@ -76,7 +75,7 @@ To install the project, follow these steps:
 > npm start
 ```
 
-
+ 
 
 ### To start using the project
 
