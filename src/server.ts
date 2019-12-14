@@ -45,7 +45,7 @@ authRouter.get('/login', (req: any, res: any) => {
 })
 
 authRouter.get('/signup', (req: any, res: any) => {
-  res.render('signup',{ message: req.flash('message')})
+  res.render('signup', { message: req.flash('message') })
 })
 
 authRouter.get('/logout', (req: any, res: any) => {
@@ -74,9 +74,8 @@ const authCheck = function (req: any, res: any, next: any) {
 }
 
 app.get('/', authCheck, (req: any, res: any) => {
-  res.render('index', { 
+  res.render('index', {
     name: JSON.stringify(req.session.user.username),
-    password: JSON.stringify(req.session.user.password),
     email: JSON.stringify(req.session.user.email)
   })
 })
@@ -114,7 +113,7 @@ userRouter.get('/:username', (req: any, res: any, next: any) => {
 })
 
 userRouter.delete('/:username', (req: any, res: any) => {
-  dbMet.getAll(req.session.user.username, (error: Error|null, result: Metric[])=>{
+  dbMet.getAll(req.session.user.username, (error: Error | null, result: Metric[]) => {
 
     result.forEach(element => {
       var key = element.username + '|' + element.m_name + '|' + element.timestamp
@@ -133,19 +132,20 @@ userRouter.delete('/:username', (req: any, res: any) => {
 //update user 
 userRouter.put('/:username', (req: any, res: any) => {
   var username = req.params.username
-  var new_password = req.body.new_password
-  var new_email = req.params.new_email
-  console.log("new_pass: "+new_password+", new_email: "+new_email)
+  var new_password = req.body.password
+  var new_email = req.body.email
+  console.log("new_pass: " + new_password + ", new_email: " + new_email)
   dbUser.get(username, (err: Error | null, result?: any) => {
     if (err) res.status(500)
-    else { 
-        dbUser.update(result.username, new_password, new_email, (err: Error | null) => {
-          if (err) {
-            console.log('Error update')
-            res.status(500)
-          }
-          else res.status(200)
-        })
+    else {
+      var newUser = new User(result.username, new_email, new_password, false)
+      dbUser.update(newUser, (err: Error | null) => {
+        if (err) {
+          console.log('Error update')
+          res.status(500)
+        }
+        else res.status(200)
+      })
     }
   })
 })
@@ -172,7 +172,7 @@ metricRouter.get('/', (req: any, res: any) => {
     (
       err: Error | null, result?: any
     ) => {
-      if (err) throw err    
+      if (err) throw err
       res.status(200).send(result)
     })
 })
