@@ -19,11 +19,13 @@ userPrePopulate.forEach(element => {
 
 // pre-populate the databse with users metrics //
 const metricPrePopulate = [
-  new Metric(`james`, `A`, `${new Date('2018-08-08 8:00 UTC').getTime()}`, 8),
-  new Metric(`james`, `B`, `${new Date('2018-08-08 8:08 UTC').getTime()}`, 88),
-  new Metric(`henintsoa`, `C`, `${new Date('2019-08-08 14:30 UTC').getTime()}`, 1),
-  new Metric(`henintsoa`, `D`, `${new Date('2019-08-09 14:38 UTC').getTime()}`, 2)
-
+  new Metric(`james`, `A`, `${new Date('December 17, 1998 08:18:58').toISOString()}`, 8),
+  new Metric(`james`, `B`, `${new Date('September 18, 2018 08:18:58').toISOString()}`, 500),
+  new Metric(`james`, `C`, `${new Date('September 19, 2019 09:19:59').toISOString()}`, 888),
+  new Metric(`james`, `D`, `${new Date('January 28, 2008 12:00:00').toISOString()}`, 777),
+  new Metric(`henintsoa`, `C`, `${new Date('August 05, 1998 18:22:58').toISOString()}`, 10),
+  new Metric(`henintsoa`, `D`, `${new Date('December 15, 2019 19:18:08').toISOString()}`, 25),
+  new Metric(`henintsoa`, `A`, `${new Date('September 20, 2020 20:20:20').toISOString()}`, 18)
 ]
 
 const dbMet: MetricsHandler = new MetricsHandler('./db/metrics')
