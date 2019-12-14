@@ -69,6 +69,16 @@ export class UserHandler {
     this.db.del(`user:${username}`,callback(null))
   }
 
+  public update(username: string, new_password: string, new_email, callback: (error: Error | null) => void) {
+    this.db.put(`user:${username}`, `${new_password}:${new_email}`, (error)=> {
+      
+      if (error) {
+        console.log('error trying update user')
+        callback(error)
+      } else callback(null)
+    })
+  }
+
   constructor(path: string) {
     this.db = LevelDB.open(path)
   }

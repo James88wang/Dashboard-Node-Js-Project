@@ -18,6 +18,18 @@
       Delete
     </button> <br /><br />
 
+    <label for="form_new_password"> new paswword </label>
+    <input type="text" id="new_Password" />
+
+    <label for="form_new_email"> new email </label>
+    <input type="text" id="new_Email" />
+
+    <button class="btn btn-primary" id="updateUser">
+      Update User
+    </button>
+
+    <br /><br />
+    <br /><br />
 
     <form action="/metrics" method="post">
 
@@ -53,6 +65,8 @@
         <!-- Metrics insterted here -->
       </tbody>
     </table>
+
+    <br /><br />
 
     <br /><br />
 
@@ -104,6 +118,7 @@
   <button class="btn btn-danger " id="deleteSearch" value="delete">
     Delete Metric
   </button>
+  
 
   <% if(name) { %>
   <script>
@@ -112,7 +127,7 @@
   <% } %>
 
 
-  <script>
+  <script >
       $('#delete').click((e) => {
         e.preventDefault();
         $.ajax({
@@ -125,69 +140,70 @@
           }
         })
       })
-
-    $('#allMetrics').click((e) => {
-      e.preventDefault();
-      $.ajax({
-        async: true,
-        url: '/metrics',
-        type: 'GET',
-        contentType: 'application/json',
-        success: (response) => {
-          $.getJSON("/metrics", {}, (data) => {
-            const content = data.map(d => {
-              return(
-                '<tr>' +
-                  '<td>' + d.m_name + '</td>'
-                  + '<td>' + d.timestamp + '</td>'
-                  + '<td>' + d.value + '</td>'
-                + '</tr>'
-              )
-            })
-            $('#metrics').empty()
-            $('#metrics').append(content.join("\n"));
-          });
-        }
-      })
-    })
-
-    $('#getOne_metric').click((e) => {
-      e.preventDefault();
-      var m_name = document.getElementById("m_name").value
-      if (m_name == '') {
-        alert(`Please specify a metric name`)
-      } else {
+    
+    
+      $('#allMetrics').click((e) => {
+        e.preventDefault();
         $.ajax({
           async: true,
-          url: '/metrics/' + m_name,
+          url: '/metrics',
           type: 'GET',
           contentType: 'application/json',
           success: (response) => {
-            $.getJSON("/metrics/" + m_name, {}, (data) => {
+            $.getJSON("/metrics", {}, (data) => {
               const content = data.map(d => {
                 return(
-                '<tr>' +
-                  '<td>' + d.m_name + '</td>'
-                  + '<td>' + d.timestamp + '</td>'
-                  + '<td>' + d.value + '</td>'
-                + '</tr>'
-              )              })
-              $('#searchMetrics').empty()
-              $('#searchMetrics').append(content.join("\n"));
+                  '<tr>' +
+                    '<td>' + d.m_name + '</td>'
+                    + '<td>' + d.timestamp + '</td>'
+                    + '<td>' + d.value + '</td>'
+                  + '</tr>'
+                )
+              })
+              $('#metrics').empty()
+              $('#metrics').append(content.join("\n"));
             });
-            console.log('/metrics/' + m_name)
-            console.log('yes dans le client')
-          },
-          error: () => {
-            console.log('Oh no ! A problem')
           }
         })
-      }
+      })
+
+      $('#getOne_metric').click((e) => {
+        e.preventDefault();
+        var m_name = document.getElementById("m_name").value
+        if (m_name == '') {
+          alert(`Please specify a metric name`)
+        } else {
+          $.ajax({
+            async: true,
+            url: '/metrics/' + m_name,
+            type: 'GET',
+            contentType: 'application/json',
+            success: (response) => {
+              $.getJSON("/metrics/" + m_name, {}, (data) => {
+                const content = data.map(d => {
+                  return(
+                  '<tr>' +
+                    '<td>' + d.m_name + '</td>'
+                    + '<td>' + d.timestamp + '</td>'
+                    + '<td>' + d.value + '</td>'
+                  + '</tr>'
+                )              })
+                $('#searchMetrics').empty()
+                $('#searchMetrics').append(content.join("\n"));
+              });
+              console.log('/metrics/' + m_name)
+              console.log('yes dans le client')
+            },
+            error: () => {
+              console.log('Oh no ! A problem')
+            }
+          })
+        }
 
     }
     )
 
-// il faudrait ajouter un message comme quoi on a bien delete
+//il faudrait ajouter un message comme quoi on a bien delete
 
     $('#deleteSearch').click((e) => {  // delete Metric
       e.preventDefault();
@@ -221,13 +237,36 @@
             window.location.replace('/')
           },
           error: () => {
-            console.log('Ouille ouille error')
+            console.log('Ouille ouille error update metric')
+          }
+        })
+      }
+    })
+
+    $('#updateUser').click((e) => {  // update User
+      e.preventDefault();
+      var new_password = document.getElementById("new_Password").value
+      var new_email = document.getElementById("new_Email").value
+      if (new_password == '' || new_email == '') {
+        alert(`Please specify a new password and a new email`)
+      }
+      else {
+        $.ajax({
+          async: true,
+          url: '/user/' + username,
+          type: 'PUT',
+          data: JSON.stringify({ 'password': new_password, 'email': new_email }),
+          contentType: 'application/json',
+          success: () => {
+            window.location.replace('/')
+          },
+          error: () => {
+            console.log('Ouille ouille error update user')
           }
         })
       }
 
     })
-
 
   </script>
 </body>

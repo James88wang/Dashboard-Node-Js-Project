@@ -5,6 +5,8 @@ import bodyparser = require('body-parser')
 import session = require('express-session')
 import levelSession = require('level-session-store')
 import { UserHandler, User } from './user'
+
+
 const flash = require('connect-flash');
 
 const port: string = process.env.PORT || '8082'
@@ -22,7 +24,6 @@ app.use(bodyparser.urlencoded({ extended: true }))
 app.use(express.static(path.join(__dirname, '/../public')))
 
 const LevelStore = levelSession(session)
-
 
 app.use(session({
   secret: 'my very secret phrase',
@@ -113,7 +114,6 @@ userRouter.delete('/:username', (req: any, res: any) => {
 
     result.forEach(element => {
       var key = element.username + '|' + element.m_name + '|' + element.timestamp
-
       dbMet.delOne(key, (err: Error | null) => {
         if (err) {
           console.log('Error delOne')
@@ -126,8 +126,25 @@ userRouter.delete('/:username', (req: any, res: any) => {
     res.end()
   })
 })
-
-
+//update user 
+userRouter.put('/:username', (req: any, res: any) => {
+  var username = req.params.username
+  var new_password = req.body.new_password
+  var new_email = req.params.new_email
+  console.log("new_pass: "+new_password+", new_email: "+new_email)
+  dbUser.get(username, (err: Error | null, result?: any) => {
+    if (err) res.status(500)
+    else { 
+        dbUser.update(result.username, new_password, new_email, (err: Error | null) => {
+          if (err) {
+            console.log('Error update')
+            res.status(500)
+          }
+          else res.status(200)
+        })
+    }
+  })
+})
 
 /////////////////////////////////////////
 //////////////   Metric   ///////////////
@@ -146,13 +163,12 @@ metricRouter.post('/', (req: any, res: any) => {
   })
 })
 
-
 metricRouter.get('/', (req: any, res: any) => {
   dbMet.getAll(req.session.user.username,
     (
       err: Error | null, result?: any
     ) => {
-      if (err) throw err
+      if (err) throw err    
       res.status(200).send(result)
     })
 })
@@ -210,6 +226,8 @@ metricRouter.put('/:m_name', (req: any, res: any) => {
     });
   })
 })
+
+
 
 
 app.listen(port, (err: Error) => {
