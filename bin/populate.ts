@@ -16,7 +16,7 @@ userPrePopulate.forEach(element => {
     console.log('Data populated users')
   })
 })
-  
+
 // pre-populate the databse with users metrics //
 const metricPrePopulate = [
   new Metric(`james`, `A`, `${new Date('2018-08-08 8:00 UTC').getTime()}`, 8),
