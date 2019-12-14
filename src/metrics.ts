@@ -51,14 +51,11 @@ export class MetricsHandler {
         }
       }) 
       .on('error', function (err) {
-        console.log('Oh my!', err)
         callback(err, err)
       })
       .on('close', function () {
-        console.log('Stream closed')
       })
       .on('end', function () {
-        console.log('Stream ended')
         callback(null, metrics)
       })
   }
@@ -77,14 +74,11 @@ export class MetricsHandler {
           }
       })
       .on('error', function (err) {
-        console.log('Oh my!', err)
         callback(err, err)
       })
       .on('close', function () {
-        console.log('Stream closed')
       })
       .on('end', function () {
-        console.log('Stream ended')
         callback(null, metrics)
       })
   }
@@ -98,7 +92,6 @@ export class MetricsHandler {
   public updateOne(key: string, value: number , callback: (error: Error | null) => void) {
     this.db.put(key, value, (error)=> {
       if (error) {
-        console.log('error trying update')
         callback(error)
       } else callback(null)
     })
