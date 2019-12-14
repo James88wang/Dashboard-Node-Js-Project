@@ -1,4 +1,5 @@
 # ECE-NodeJS-Dashboard-Project 
+[![Build Status](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project.svg?branch=master)](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project)
 
 Dashboard allows:
 
