@@ -46,6 +46,20 @@ To install the project, follow these steps:
 
 ## Using dashboard project
 
+### To launch the pre-populate script
+
+1. Go to the `<my_path>/Dashboard-Node-Js-Project` directory:
+
+```shell
+> cd <my_path>/Dashboard-Node-Js-Project
+```
+
+2. Run the project:
+
+```shell
+> npm run pre-populate
+```
+
 ### To launch the dashboard project
 
 1. Go to the `<my_path>/Dashboard-Node-Js-Project` directory:
@@ -64,7 +78,8 @@ To install the project, follow these steps:
 
 ### To start using the project
 
-1. Create a user by signing up
+1. Create a user by signing up or use pre-populate user credentials to connect
+
 2. Sign in with your credentials
 3. Add metrics, specifying the name and the value in the `m_name` and `Value` input fields, and clicking on the `Post metric` button
 4. Display all the metrics by clicking on the `Get All Metrics` button
