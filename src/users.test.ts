@@ -1,5 +1,5 @@
 import 'chai'
-import { expect, assert } from 'chai'
+import { expect } from 'chai'
 import { User, UserHandler} from './user'
 import { LevelDB } from "./leveldb"
 
