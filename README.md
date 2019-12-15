@@ -101,8 +101,10 @@ To install the project, follow these steps:
 
    2.  OR use `npm run pre-populate` to create 2 users automatically with these credentials:
 
+
+
    | Login | Password | email                 |
-| ----- | -------- | --------------------- |
+   | ----- | -------- | --------------------- |
    | james | pwd      | james.wang@edu.ece.fr |
    | henintsoa | pwd      | henintsoa.razafindrazaka@edu.ece.fr |
    
