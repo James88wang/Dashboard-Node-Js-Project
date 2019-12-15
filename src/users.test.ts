@@ -8,6 +8,7 @@ var dbUser: UserHandler
 
 describe('user', function () {
   before(function () {
+    
     LevelDB.clear(dbPath)
     dbUser = new UserHandler(dbPath)
   })
@@ -64,3 +65,4 @@ describe('user', function () {
     dbUser.close()
   })
 })
+

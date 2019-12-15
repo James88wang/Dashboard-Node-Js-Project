@@ -2,10 +2,7 @@ import 'chai'
 import { expect, assert } from 'chai'
 import { Metric, MetricsHandler } from './metrics'
 import { LevelDB } from "./leveldb"
-import { doesNotReject, AssertionError } from 'assert'
-import { watchFile } from 'fs'
 
-const a: number = 0
 const dbPath: string = 'db_test'
 var dbMet: MetricsHandler
 
