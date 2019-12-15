@@ -1,5 +1,5 @@
 # ECE-NodeJS-Dashboard-Project 
-[![Build Status](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project.svg?branch=master)](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project) ![issues](https://img.shields.io/github/issues/James88wang/Dashboard-Node-Js-Project) ![forks](https://img.shields.io/github/forks/James88wang/Dashboard-Node-Js-Project) ![stars](https://img.shields.io/github/stars/James88wang/Dashboard-Node-Js-Project) [![Coverage Status](https://coveralls.io/repos/github/James88wang/Dashboard-Node-Js-Project/badge.svg?branch=master)](https://coveralls.io/github/James88wang/Dashboard-Node-Js-Project?branch=master) 
+[![Build Status](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project.svg?branch=master)](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project) ![issues](https://img.shields.io/github/issues/James88wang/Dashboard-Node-Js-Project) ![forks](https://img.shields.io/github/forks/James88wang/Dashboard-Node-Js-Project) ![stars](https://img.shields.io/github/stars/James88wang/Dashboard-Node-Js-Project) 
 
 
 
