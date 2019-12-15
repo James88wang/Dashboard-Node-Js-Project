@@ -177,12 +177,12 @@ To test our outside dependency, we have run our tests in **Docker**. To do so, w
 
 3. We have run the Docker image
 
-   ![9](/img/docker run - ps.PNG)
+   ![9](/img/docker-run-ps.PNG)
 
 
 4. We have displayed the result of the tests
 
-   ![10](/img/docker logs.PNG)
+   ![10](/img/docker-logs.PNG)
 
 
 
