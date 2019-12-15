@@ -63,6 +63,7 @@ To install the project, follow these steps:
 
 
 
+
 ### To launch the pre-populate script
 
 1. Go to the `<my_path>/Dashboard-Node-Js-Project` directory:
@@ -160,6 +161,28 @@ To install the project, follow these steps:
    
    ![7](/img/7.png)
 
+
+
+
+
+## Test with Docker
+To test our outside dependency, we have run our tests in **Docker**. To do so, we have followed these steps:
+
+1. We have created a `Dockerfile` and a `.dockerignore` files to configure the Docker image 
+
+2. We have built the Docker image of our dashboard application
+
+   ![8](/img/docker-build.PNG)
+
+
+3. We have run the Docker image
+
+   ![9](/img/docker run - ps.PNG)
+
+
+4. We have displayed the result of the tests
+
+   ![10](/img/docker logs.PNG)
 
 
 
