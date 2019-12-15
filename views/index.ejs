@@ -16,14 +16,14 @@
 
 		<button class="btn btn-danger " id="delete" type="submit" value="delete">
 			Delete
-		</button> <br />
+		</button> <br /><br />
 
 		<!-- read user -->
 		<table class="table table-striped table-dark text-white ">
 			<thead>
 				<tr>
-					<th scope="col"> username </th>
-					<th scope="col"> email </th>
+					<th scope="col"> Username </th>
+					<th scope="col"> Email </th>
 				</tr>
 				<tr>
 					<td> <%- name %> </td>
@@ -34,7 +34,8 @@
 				<!-- Metrics insterted here -->
 			</tbody>
 		</table>
-
+		<hr class="bg-secondary" />
+		<br>
 
 		<!-- udate user -->
 		<form method="GET" action="">
@@ -63,7 +64,7 @@
 
 		<div class="form-group">
 			<br>
-			<label for="form_m_name"> m_name </label>
+			<label for="form_m_name"> Metric's Group </label>
 			<input required id="form_m_name" type="text" name="m_name" class="bg-dark text-white rounded" />
 		</div>
 		<div class="form-group">
@@ -93,7 +94,7 @@
 		<table class="table table-striped table-dark text-white ">
 			<thead>
 				<tr>
-					<th scope="col"> Metric </th>
+					<th scope="col"> Metric's Group </th>
 					<th scope="col"> Timestamp </th>
 					<th scope="col"> Value </th>
 				</tr>
@@ -112,7 +113,7 @@
 
 	<div class="bg-dark rounded border border-secondary justify-content-center align-items-center text-center">
 		<br>
-		<label for="form_m_name"> Metric's name </label>
+		<label for="form_m_name"> Metric's Group </label>
 		<input type="text" id="m_name" class="bg-dark text-white rounded" />
 
 		<button class="btn btn-primary " id="getOne_metric">
@@ -123,7 +124,7 @@
 		<table class="table table-striped table-dark text-white ">
 			<thead>
 				<tr>
-					<th scope="col"> Metric </th>
+					<th scope="col"> Metric's Group </th>
 					<th scope="col"> Timestamp </th>
 					<th scope="col"> Value </th>
 				</tr>
@@ -138,7 +139,7 @@
 
 	<div class="bg-dark rounded border border-secondary justify-content-center align-items-center text-center">
 		<br>
-		<label for="form_m_name"> Metric's name </label>
+		<label for="form_m_name"> Metric's Group </label>
 		<input type="text" id="m_name3" class="bg-dark text-white rounded" />
 
 		<label for="form_m_name"> Value </label>
@@ -157,7 +158,7 @@
 	<!--delete metric-->
 	<div class="bg-dark rounded border border-secondary justify-content-center align-items-center text-center">
 		<br>
-		<label for="form_m_name"> m_name </label>
+		<label for="form_m_name"> Metric's Group </label>
 		<input id="m_name2" type="text" name="m_name" class="bg-dark text-white rounded" />
 
 		<button class="btn btn-danger " id="deleteSearch" value="delete">
