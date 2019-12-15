@@ -127,10 +127,10 @@ To pre-populate the database, follow these steps:
 
 
 
-## what problems have we encountered?
+## What problems have we encountered ?
 
-* send http type *delete* and *put* requests from the client side 
-* it was quite hard to match the metrics data with the **graph** 
+* send http type `delete` and `put` requests from the client side 
+* it was quite hard to match the metrics data with the `graph` 
 * we have been in `trouble in connecting to the levelDB database because the documentation is really poor`.
 * we did not know much about "github" and it took us a while to get familiar with this tool. Now, thanks to this project, we have been able to better use github. In particular by using: 
   * push the local repository
