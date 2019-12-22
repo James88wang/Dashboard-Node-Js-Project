@@ -1,5 +1,5 @@
 # ECE-NodeJS-Dashboard-Project 
-[![Build Status](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project.svg?branch=master)](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project) [![GitHub watchers](https://img.shields.io/github/watchers/James88wang/Dashboard-Node-Js-Project.svg?style=social&label=Watch&maxAge=2592000)](https://github.com/James88wang/Dashboard-Node-Js-Project)[![GitHub forks](https://img.shields.io/github/forks/James88wang/Dashboard-Node-Js-Project.svg?style=social&label=Fork&maxAge=2592000)](https://github.com/James88wang/Dashboard-Node-Js-Project.git)
+[![Build Status](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project.svg?branch=master)](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project) [![GitHub watchers](https://img.shields.io/github/watchers/James88wang/Dashboard-Node-Js-Project.svg?style=plastic&label=Watch&maxAge=2592000)](https://github.com/James88wang/Dashboard-Node-Js-Project)[![GitHub forks](https://img.shields.io/github/forks/James88wang/Dashboard-Node-Js-Project.svg?style=plastic&label=Fork&maxAge=2592000)](https://github.com/James88wang/Dashboard-Node-Js-Project.git)
 
 
 
