@@ -1,5 +1,6 @@
 # ECE-NodeJS-Dashboard-Project 
-[![Build Status](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project.svg?branch=master)](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project) [![GitHub watchers](https://img.shields.io/github/watchers/James88wang/Dashboard-Node-Js-Project.svg?style=plastic&label=Watch&maxAge=2592000)](https://github.com/James88wang/Dashboard-Node-Js-Project/watchers/)[![GitHub forks](https://img.shields.io/github/forks/James88wang/Dashboard-Node-Js-Project.svg?style=plastic&label=Fork&maxAge=2592000)](https://github.com/James88wang/Dashboard-Node-Js-Project.git/network/)
+[![Build Status](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project.svg?branch=master)](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project) [![GitHub watchers](https://img.shields.io/github/watchers/James88wang/Dashboard-Node-Js-Project.svg?style=plastic&label=Watch&maxAge=2592000)](https://github.com/James88wang/Dashboard-Node-Js-Project/watchers/)[![GitHub forks](https://img.shields.io/github/forks/James88wang/Dashboard-Node-Js-Project.svg?style=plastic&label=Fork&maxAge=2592000)](https://github.com/James88wang/Dashboard-Node-Js-Project/network/)[![Github releases (by asset)](https://img.shields.io/github/downloads/James88wang/Dashboard-Node-Js-Project)](https://github.com/James88wang/Dashboard-Node-Js-Project/releases/)
+
 
 
 
