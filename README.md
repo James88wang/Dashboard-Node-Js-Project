@@ -1,5 +1,5 @@
 # ECE-NodeJS-Dashboard-Project 
-[![Build Status](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project.svg?branch=master)](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project) ![issues](https://img.shields.io/github/issues/James88wang/Dashboard-Node-Js-Project) ![forks](https://img.shields.io/github/forks/James88wang/Dashboard-Node-Js-Project) ![stars](https://img.shields.io/github/stars/James88wang/Dashboard-Node-Js-Project) 
+[![Build Status](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project.svg?branch=master)](https://travis-ci.org/James88wang/Dashboard-Node-Js-Project) ![GitHub forks](https://img.shields.io/github/forks/James88wang/Dashboard-Node-Js-Project?label=Forks&style=plastic)
 
 
 
@@ -225,3 +225,4 @@ To test our outside dependency, we have run our tests in **Docker**. To do so, w
 # Licenses
 
 [![Open Source Love svg1](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
