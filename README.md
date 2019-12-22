@@ -3,7 +3,8 @@
 
 
 We continued the work done in `lab 4` of the nodeJS course to do this project. 
-Link to lab 4: * https://github.com/James88wang/ECE-NodeJS-Project/tree/master/lab4
+Link to lab 4: 
+* https://github.com/James88wang/ECE-NodeJS-Project/tree/master/lab4
 
 
 Dashboard allows:
